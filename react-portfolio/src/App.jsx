@@ -2,7 +2,6 @@ import { useState } from 'react'
 import React from 'react'
 import SplitText from './components/SplitText.jsx';
 import './App.css'
-import { NavBar } from './components/NavBar.jsx';
 
 
 function App() {
@@ -18,8 +17,7 @@ function App() {
 
   return (
     <>
-      <NavBar items={items} />
-      
+
       <SplitText text="arnav"
         className="font-bold text-center"
         delay={100}
