@@ -1,3 +1,26 @@
+/* FONTS */
+
+@font-face {
+  font-family: 'NoirdenBold';
+  src: url('./assets/fonts/NoidenBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NeometricBlack';
+  src: url('./assets/fonts/NeometricBlack.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'NeometricExtraBold';
+  src: url('./assets/fonts/NeometricExtraBold.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* APP.CSS */
+
 #root {
   max-width: 1280px;
   margin: 0 auto;
@@ -6,15 +29,8 @@
 }
 
 .split-parent {
-  font-size: 102px; 
-  font-family: 'NoirdenBold', helvetica;
+  font-size: 150px; 
+  font-family: 'NeometricExtraBold', helvetica;
+  color:rgb(7, 7, 7)
 }
 
-/* FONTS */
-
-@font-face {
-  font-family: 'NoirdenBold';
-  src: url('./assets/fonts/Noiden-Bold.otf') format('opentype');
-  font-weight: normal;
-  font-style: normal;
-}

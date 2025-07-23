@@ -2,6 +2,7 @@ import { useState } from 'react'
 import React from 'react'
 import SplitText from './components/SplitText.jsx';
 import './App.css'
+import { NavBar } from './components/NavBar.jsx';
 
 
 function App() {
@@ -9,13 +10,18 @@ function App() {
   const handleAnimationComplete = () => {
     console.log('All letters have animated!');
     };
+  const items = [
+    { label: "Home", href: "#" },
+    { label: "About", href: "#" },
+    { label: "Contact", href: "#" },
+  ];
 
   return (
     <>
-      
+      <NavBar items={items} />
       
       <SplitText text="arnav"
-        className="text-2xl font-bold text-center"
+        className="font-bold text-center"
         delay={100}
         duration={0.6}
         ease="power3.out"
