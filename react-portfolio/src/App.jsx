@@ -19,7 +19,8 @@ function App() {
 
   return (
     <>
-      <NavBar 
+      <NavBar
+        style={{  }}
         items={items}
         particleCount={0}
         initialActiveIndex={0}
@@ -48,6 +49,7 @@ function App() {
         textAlign="center"
         onLetterAnimationComplete={handleAnimationComplete}
       />
+      
 
 
     </>
