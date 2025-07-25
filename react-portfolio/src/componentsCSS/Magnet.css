@@ -1,0 +1,19 @@
+.wrapper {
+
+  font-family: 'Times New Roman', Times, serif;
+  font-style: italic;
+  display: inline-block;
+  border: 2px solid #000;
+  border-radius: 1000px;
+  background-color: transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+.text {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #000;
+  transition: inherit;
+  display: inline-block;
+}

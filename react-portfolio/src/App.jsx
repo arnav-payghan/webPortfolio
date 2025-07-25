@@ -1,7 +1,9 @@
 import { useState } from 'react'
 import React from 'react'
-import SplitText from './components/SplitText.jsx';
 import './App.css'
+import SplitText from './components/SplitText.jsx';
+import NavBar from './components/NavBar.jsx';
+import Magnet from './components/Magnet.jsx';
 
 
 function App() {
@@ -9,14 +11,17 @@ function App() {
   const handleAnimationComplete = () => {
     console.log('All letters have animated!');
     };
-  const items = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Contact", href: "#" },
-  ];
 
   return (
     <>
+      <NavBar />
+
+      {/* Fix Magnet Bug */}
+      {/* <span>
+        <Magnet padding={50} disabled={false} magnetStrength={50}>
+          <p>Hello!</p>
+        </Magnet>
+      </span> */}
 
       <SplitText text="arnav"
         className="font-bold text-center"
