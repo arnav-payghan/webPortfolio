@@ -2,8 +2,8 @@ import { useState } from 'react'
 import React from 'react'
 import './App.css'
 import SplitText from './components/SplitText.jsx';
-import NavBar from './components/NavBar.jsx';
 import Magnet from './components/Magnet.jsx';
+import NavBar from './components/NavBar.jsx';
 
 
 function App() {
@@ -11,10 +11,22 @@ function App() {
   const handleAnimationComplete = () => {
     console.log('All letters have animated!');
     };
+  const items = [
+    { label: "Home", href: "#" },
+    { label: "About", href: "#" },
+    { label: "Contact", href: "#" },
+  ];
 
   return (
     <>
-      <NavBar />
+      <NavBar 
+        items={items}
+        particleCount={0}
+        initialActiveIndex={0}
+        animationTime={600}
+        timeVariance={300}
+        colors={[1, 2, 3, 1, 2, 3, 1, 4]}
+      />
 
       {/* Fix Magnet Bug */}
       {/* <span>
