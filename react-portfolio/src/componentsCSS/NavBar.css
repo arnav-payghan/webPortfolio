@@ -8,7 +8,9 @@
 
 .gooey-nav-container nav {
   display: flex;
-  position: relative;
+  position: sticky;
+  align-items: center;
+  justify-content: space-between;
   transform: translate3d(0, 0, 0.01px);
   font-family: 'NeometricBold', sans-serif;
 }
