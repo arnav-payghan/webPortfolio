@@ -2,8 +2,9 @@ import { useState } from 'react'
 import React from 'react'
 import './App.css'
 import SplitText from './components/SplitText.jsx';
-import Magnet from './components/Magnet.jsx';
+{ /* import Magnet from './components/Magnet.jsx'; */ }
 import NavBar from './components/NavBar.jsx';
+import ScrollReveal from './components/ScrollReveal.jsx';
 
 
 function App() {
@@ -14,6 +15,7 @@ function App() {
   const items = [
     { label: "Home", href: "#" },
     { label: "About", href: "#" },
+    { label: "Experience", href: "#" },
     { label: "Contact", href: "#" },
   ];
 
@@ -49,6 +51,18 @@ function App() {
         textAlign="center"
         onLetterAnimationComplete={handleAnimationComplete}
       />
+
+      <ScrollReveal
+        baseOpacity={0.1}
+        enableBlur={true}
+        baseRotation={0}
+        blurStrength={3}
+        wordAnimationEnd={"bottom bottom"}
+      >
+        Hi! I'm Arnav Payghan.
+      </ScrollReveal>
+
+      <br /><br /><br /><br /><br /><br /><br /><br /><br />
       
 
 
