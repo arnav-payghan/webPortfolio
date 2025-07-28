@@ -5,6 +5,7 @@ import SplitText from './components/SplitText.jsx';
 { /* import Magnet from './components/Magnet.jsx'; */ }
 import NavBar from './components/NavBar.jsx';
 import ScrollReveal from './components/ScrollReveal.jsx';
+import { ScrollVelocity } from './components/ScrollVelocity.jsx';
 
 
 function App() {
@@ -53,16 +54,26 @@ function App() {
       />
 
       <ScrollReveal
-        baseOpacity={0.1}
+        baseOpacity={0}
         enableBlur={true}
         baseRotation={0}
-        blurStrength={3}
+        blurStrength={5}
         wordAnimationEnd={"bottom bottom"}
       >
         Hi! I'm Arnav Payghan.
       </ScrollReveal>
 
-      <br /><br /><br /><br /><br /><br /><br /><br /><br />
+      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+
+      {/*
+      <span>
+        <ScrollVelocity
+          texts={['React Bits', 'Scroll Down']} 
+          velocity={velocity} 
+          className="custom-scroll-text"
+        />
+      </span>
+      */}
       
 
 
