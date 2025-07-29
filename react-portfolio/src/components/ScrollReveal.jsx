@@ -63,13 +63,13 @@ const ScrollReveal = ({
       wordElements,
       { opacity: baseOpacity, willChange: 'opacity' },
       {
-        ease: 'power2.out',
+        ease: 'none',
         opacity: 1,
-        stagger: 0.15,
+        stagger: 0.05,
         scrollTrigger: {
           trigger: el,
           scroller,
-          start: 'top bottom-=40%',
+          start: 'top bottom-=20%',
           end: wordAnimationEnd,
           scrub: true,
         },

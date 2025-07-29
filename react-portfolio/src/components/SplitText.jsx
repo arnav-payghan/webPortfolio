@@ -3,6 +3,8 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { SplitText as GSAPSplitText } from "gsap/SplitText";
 
+import 'C:/webPortfolio/react-portfolio/src/componentsCSS/SplitText.css';
+
 gsap.registerPlugin(ScrollTrigger, GSAPSplitText);
 
 const SplitText = ({

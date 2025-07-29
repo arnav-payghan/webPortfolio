@@ -1,0 +1,36 @@
+.name-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1001;
+}
+
+.ghost-container {
+  display: inline-block;
+  width: 40px; 
+  height: 40px;
+  position: relative;
+}
+
+.ghost,
+.ghost-wink {
+  width: 100%;
+  height: auto;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: opacity 0.3s ease;
+}
+
+.ghost-wink {
+  opacity: 0;
+}
+
+.ghost-container:hover .ghost {
+  opacity: 0;
+}
+
+.ghost-container:hover .ghost-wink {
+  opacity: 1;
+}

@@ -5,8 +5,7 @@ import SplitText from './components/SplitText.jsx';
 { /* import Magnet from './components/Magnet.jsx'; */ }
 import NavBar from './components/NavBar.jsx';
 import ScrollReveal from './components/ScrollReveal.jsx';
-import { ScrollVelocity } from './components/ScrollVelocity.jsx';
-
+import ScrollVelocity from './components/ScrollVelocity.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -39,26 +38,49 @@ function App() {
         </Magnet>
       </span> */}
 
-      <SplitText text="arnav"
-        className="font-bold text-center"
-        delay={100}
-        duration={0.6}
-        ease="power3.out"
-        splitType="words, chars"
-        from={{ opacity: 0, y: 40 }}
-        to={{ opacity: 1, y: 0 }}
-        threshold={0.1}
-        rootMargin="-100px"
-        textAlign="center"
-        onLetterAnimationComplete={handleAnimationComplete}
-      />
+      {/* SPLIT TEXT arnav USAGE */}
+      <div className="name-container">
+        <SplitText 
+          text="ar"
+          className="font-bold text-center"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="words, chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
+
+        <span className="ghost-container" style={{ zIndex: 1000}}>
+          <img src="../public/images/ghost/openEyeGhost.svg" alt="Ghost" className="ghost" />
+          <img src="../public/images/ghost/closedEyeGhost.svg" alt="Ghost Wink" className="ghost-wink" />
+        </span>
+
+        <SplitText 
+          text="nav"
+          className="font-bold text-center"
+          delay={100}
+          duration={0.6}
+          ease="power3.out"
+          splitType="words, chars"
+          from={{ opacity: 0, y: 40 }}
+          to={{ opacity: 1, y: 0 }}
+          threshold={0.1}
+          rootMargin="-100px"
+          textAlign="center"
+          onLetterAnimationComplete={handleAnimationComplete}
+        />
+      </div>
 
       <ScrollReveal
         baseOpacity={0}
         enableBlur={true}
         baseRotation={0}
         blurStrength={5}
-        wordAnimationEnd={"bottom bottom"}
       >
         Hi! I'm Arnav Payghan.
       </ScrollReveal>
