@@ -32,58 +32,52 @@ function App() {
       />
 
       <section className="hero-section">
-        <Magnet padding={60} disabled={false} magnetStrength={2} 
-        className="magnet-wrapper absolute p-4 text-black left-25 top-50 transform translate-x-1/2" 
-        style={{ fontFamily: "GildaDisplay", fontStyle: "italic" }}>
-          <p>Minimalism</p>
-        </Magnet>
-
-        <Magnet padding={60} disabled={false} magnetStrength={2} 
-        className="magnet-wrapper absolute p-4 text-black left-2/3 top-4/6 transform translate-x-1/2" 
-        style={{ fontFamily: "GildaDisplay", fontStyle: "italic" }}>
-          <p>Modern</p>
-        </Magnet>
-
-        <Magnet padding={60} disabled={false} magnetStrength={2} 
-        className="magnet-wrapper absolute p-4 text-black left-3/4 top-30 transform translate-x-1/2" 
-        style={{ fontFamily: "GildaDisplay", fontStyle: "italic" }}>
-          <p>Elegant</p>
-        </Magnet>
-
         {/* arnav. */}
-        <div className="relative my-[100px] mx-center h-[200px] group">
-          {/* Text */}
+        <div className="relative my-[100px] flex justify-center items-center group">
+          {/* Big centered text */}
           <p 
-            className="text-black text-9xl z-10 relative text-center"
+            className="text-black text-[40px] sm:text-[80px] md:text-[120px] lg:text-[200px] leading-none"
             style={{ fontFamily: "NeometricExtraBold" }}
           >
             arnav.
           </p>
-          <p className="absolute z-100 top-1/3 left-4/9 -translate-x-1/2 w-[60px] h-[60px] rounded-full" style={{ backgroundColor:"#0057ff", color:"#0057ff" }}>.</p>
-          <img 
-            src="/images/ghost/openEyeGhost.svg" 
-            alt="Ghost" 
-            className="absolute z-100 top-1/3 left-4/9 -translate-x-1/2 w-[60px] transition-opacity duration-400 ease-in-out group-hover:opacity-0"
-          />
-          <img 
-            src="/images/ghost/closedEyeGhost.svg" 
-            alt="Ghost Wink" 
-            className="absolute z-100 top-1/3 left-4/9 -translate-x-1/2 w-[60px] opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100 -rotate-10"
-          />
+          {/* Ghost images layered over text */}
+          <div className="absolute left-3/8 top-5/6 transform -translate-x-[20%] -translate-y-1/2 w-[100px] h-[100px]">
+            <img 
+              src="/images/ghost/openEyeGhost.svg" 
+              alt="Ghost" 
+              className="absolute z-100 inset-0 w-full h-full transition-opacity duration-400 ease-in-out group-hover:opacity-0"
+            />
+            <img  
+              src="/images/ghost/closedEyeGhost.svg" 
+              alt="Ghost Wink" 
+              className="absolute z-100 inset-0 w-full h-full opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
+            />
+            <p className="absolute z-50 w-[100px] h-[100px] rounded-full" style={{ backgroundColor:"#0057ff", color:"#0057ff" }}>.</p>
+          </div>
         </div>
+
 
       </section>
 
-      {/*
-      <span>
-        <ScrollVelocity
-          texts={['React Bits', 'Scroll Down']} 
-          velocity={velocity} 
-          className="custom-scroll-text"
-        />
-      </span>
-      */}
-      
+      <section className="aboutMe-section">
+        <div className="flex flex-col items-center justify-center h-screen">
+          <div className="information">
+            <table className="table-auto">
+              <thead className="text-black text-[30px] sm:text-[60px] md:text-[100px] lg:text-[150px]" style={{ fontFamily: "NeometricAltMedium" }}>
+                <tr>
+                  <th>Hello!</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>Welcome to my portfolio website.</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </section>
 
 
     </>
