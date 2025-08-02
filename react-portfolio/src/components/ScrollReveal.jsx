@@ -2,7 +2,7 @@ import { useEffect, useRef, useMemo } from 'react';
 import { gsap } from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 
-import 'C:/webPortfolio/react-portfolio/src/componentsCSS/ScrollReveal.css';
+// import "C:/webPortfolio/react-portfolio/src/componentsCSS/ScrollReveal.css";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -25,7 +25,7 @@ const ScrollReveal = ({
     return text.split(/(\s+)/).map((word, index) => {
       if (word.match(/^\s+$/)) return word;
       return (
-        <span className="word" key={index}>
+        <span className="inline-block word" key={index}>
           {word}
         </span>
       );
@@ -65,11 +65,11 @@ const ScrollReveal = ({
       {
         ease: 'none',
         opacity: 1,
-        stagger: 0.05,
+        stagger: 0.02,
         scrollTrigger: {
           trigger: el,
           scroller,
-          start: 'top bottom-=20%',
+          start: 'top bottom+=100%',
           end: wordAnimationEnd,
           scrub: true,
         },
@@ -101,8 +101,8 @@ const ScrollReveal = ({
   }, [scrollContainerRef, enableBlur, baseRotation, baseOpacity, rotationEnd, wordAnimationEnd, blurStrength]);
 
   return (
-    <h2 ref={containerRef} className={`scroll-reveal ${containerClassName}`}>
-      <p className={`scroll-reveal-text ${textClassName}`}>{splitText}</p>
+    <h2 ref={containerRef} className={`my-5 ${containerClassName}`}>
+      <p className={`text-[clamp(1.6rem,4vw,3rem)] font-semibold ${textClassName} text-black`}>{splitText}</p>
     </h2>
   );
 };

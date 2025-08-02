@@ -155,7 +155,7 @@ const NavBar = ({
   return (
     <div className="gooey-nav-container" ref={containerRef}>
       <nav>
-        <img src="..\public\images\logo\arnavsLogo.svg" alt="Logo" style={{ width: '50px', height: '50px',
+        <img src="..\images\logo\arnavsLogo.svg" alt="Logo" style={{ width: '50px', height: '50px',
           marginTop: '-20px', marginLeft: `#{marginLeftValue}` }} />
         <ul ref={navRef}>
           {items.map((item, index) => (

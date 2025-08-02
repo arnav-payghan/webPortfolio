@@ -1,15 +1,14 @@
 import { useState, useEffect, useRef } from "react";
-import "../componentsCSS/Magnet.css";
 
 const Magnet = ({
   children,
-  padding = 120, // optional: increases activation zone
+  padding = 100,
   disabled = false,
-  magnetStrength = -4, // stronger attraction
-  activeTransition = "transform 0.1s ease-out",
-  inactiveTransition = "transform 0.3s ease-in-out",
-  wrapperClassName = "wrapper",
-  innerClassName = "text",
+  magnetStrength = 2,
+  activeTransition = "transform 0.3s ease-out",
+  inactiveTransition = "transform 0.5s ease-in-out",
+  wrapperClassName = "",
+  innerClassName = "",
   ...props
 }) => {
   const [isActive, setIsActive] = useState(false);
@@ -34,6 +33,7 @@ const Magnet = ({
 
       if (distX < width / 2 + padding && distY < height / 2 + padding) {
         setIsActive(true);
+
         const offsetX = (e.clientX - centerX) / magnetStrength;
         const offsetY = (e.clientY - centerY) / magnetStrength;
         setPosition({ x: offsetX, y: offsetY });
@@ -55,15 +55,19 @@ const Magnet = ({
     <div
       ref={magnetRef}
       className={wrapperClassName}
-      style={{
-        transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
-        transition: transitionStyle,
-        willChange: "transform",
-        display: "inline-block",
-      }}
+      style={{ position: "relative", display: "inline-block" }}
       {...props}
     >
-      <div className={innerClassName}>{children}</div>
+      <div
+        className={innerClassName}
+        style={{
+          transform: `translate3d(${position.x}px, ${position.y}px, 0)`,
+          transition: transitionStyle,
+          willChange: "transform",
+        }}
+      >
+        {children}
+      </div>
     </div>
   );
 };

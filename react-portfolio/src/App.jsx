@@ -2,7 +2,7 @@ import { useState } from 'react'
 import React from 'react'
 import './App.css'
 import SplitText from './components/SplitText.jsx';
-{ /* import Magnet from './components/Magnet.jsx'; */ }
+import Magnet from './components/Magnet.jsx';
 import NavBar from './components/NavBar.jsx';
 import ScrollReveal from './components/ScrollReveal.jsx';
 import ScrollVelocity from './components/ScrollVelocity.jsx';
@@ -13,10 +13,10 @@ function App() {
     console.log('All letters have animated!');
     };
   const items = [
-    { label: "Home", href: "#" },
-    { label: "About", href: "#" },
-    { label: "Experience", href: "#" },
-    { label: "Contact", href: "#" },
+    { label: "Home", href: "#home" },
+    { label: "About", href: "#about" },
+    { label: "Experience", href: "#experience" },
+    { label: "Contact", href: "#contact" },
   ];
 
   return (
@@ -31,61 +31,48 @@ function App() {
         colors={[1, 2, 3, 1, 2, 3, 1, 4]}
       />
 
-      {/* Fix Magnet Bug */}
-      {/* <span>
-        <Magnet padding={50} disabled={false} magnetStrength={50}>
-          <p>Hello!</p>
+      <section className="hero-section">
+        <Magnet padding={60} disabled={false} magnetStrength={2} 
+        className="magnet-wrapper absolute p-4 text-black left-25 top-50 transform translate-x-1/2" 
+        style={{ fontFamily: "GildaDisplay", fontStyle: "italic" }}>
+          <p>Minimalism</p>
         </Magnet>
-      </span> */}
 
-      {/* SPLIT TEXT arnav USAGE */}
-      <div className="name-container">
-        <SplitText 
-          text="ar"
-          className="font-bold text-center"
-          delay={100}
-          duration={0.6}
-          ease="power3.out"
-          splitType="words, chars"
-          from={{ opacity: 0, y: 40 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-          rootMargin="-100px"
-          textAlign="center"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
+        <Magnet padding={60} disabled={false} magnetStrength={2} 
+        className="magnet-wrapper absolute p-4 text-black left-2/3 top-4/6 transform translate-x-1/2" 
+        style={{ fontFamily: "GildaDisplay", fontStyle: "italic" }}>
+          <p>Modern</p>
+        </Magnet>
 
-        <span className="ghost-container" style={{ zIndex: 1000}}>
-          <img src="../public/images/ghost/openEyeGhost.svg" alt="Ghost" className="ghost" />
-          <img src="../public/images/ghost/closedEyeGhost.svg" alt="Ghost Wink" className="ghost-wink" />
-        </span>
+        <Magnet padding={60} disabled={false} magnetStrength={2} 
+        className="magnet-wrapper absolute p-4 text-black left-3/4 top-30 transform translate-x-1/2" 
+        style={{ fontFamily: "GildaDisplay", fontStyle: "italic" }}>
+          <p>Elegant</p>
+        </Magnet>
 
-        <SplitText 
-          text="nav"
-          className="font-bold text-center"
-          delay={100}
-          duration={0.6}
-          ease="power3.out"
-          splitType="words, chars"
-          from={{ opacity: 0, y: 40 }}
-          to={{ opacity: 1, y: 0 }}
-          threshold={0.1}
-          rootMargin="-100px"
-          textAlign="center"
-          onLetterAnimationComplete={handleAnimationComplete}
-        />
-      </div>
+        {/* arnav. */}
+        <div className="relative my-[100px] mx-center h-[200px] group">
+          {/* Text */}
+          <p 
+            className="text-black text-9xl z-10 relative text-center"
+            style={{ fontFamily: "NeometricExtraBold" }}
+          >
+            arnav.
+          </p>
+          <p className="absolute z-100 top-1/3 left-4/9 -translate-x-1/2 w-[60px] h-[60px] rounded-full" style={{ backgroundColor:"#0057ff", color:"#0057ff" }}>.</p>
+          <img 
+            src="/images/ghost/openEyeGhost.svg" 
+            alt="Ghost" 
+            className="absolute z-100 top-1/3 left-4/9 -translate-x-1/2 w-[60px] transition-opacity duration-400 ease-in-out group-hover:opacity-0"
+          />
+          <img 
+            src="/images/ghost/closedEyeGhost.svg" 
+            alt="Ghost Wink" 
+            className="absolute z-100 top-1/3 left-4/9 -translate-x-1/2 w-[60px] opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100 -rotate-10"
+          />
+        </div>
 
-      <ScrollReveal
-        baseOpacity={0}
-        enableBlur={true}
-        baseRotation={0}
-        blurStrength={5}
-      >
-        Hi! I'm Arnav Payghan.
-      </ScrollReveal>
-
-      <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
+      </section>
 
       {/*
       <span>
