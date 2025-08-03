@@ -21,7 +21,7 @@
 
     return (
       <>
-        <div className="overflow-x-hidden overflow-y-scroll custom-scrollbar h-screen">
+        <div className="">
         <CursorifyProvider
           cursor={DefaultCursor}
           opacity={1}
@@ -61,6 +61,9 @@
                   </div>
                 </div>
                 <p className="text-gray-300 mt-3 leading-5 text-sm" style={{ fontFamily: 'Helvetica' }} >Hey there! I'm Arnav Payghan, a final year computer engineering student. Currently learning UI/UX design and web development. I love to design and create user-friendly interfaces that enhance the overall user experience.</p>
+              </div>
+              <div className="skills">
+                
               </div>
             </div>
 
