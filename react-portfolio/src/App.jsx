@@ -1,87 +1,95 @@
-import { useState } from 'react'
-import React from 'react'
-import './App.css'
-import SplitText from './components/SplitText.jsx';
-import Magnet from './components/Magnet.jsx';
-import NavBar from './components/NavBar.jsx';
-import ScrollReveal from './components/ScrollReveal.jsx';
-import ScrollVelocity from './components/ScrollVelocity.jsx';
+  import { useState } from 'react'
+  import React from 'react'
+  import './App.css'
+  import { CursorifyProvider, DefaultCursor } from '@cursorify/react'
+  import LightRays from './components/LightRays.jsx';
+  import Dock from './components/Dock.jsx';
+  import MusicPlayer from './components/MusicPlayer.jsx';
 
-function App() {
-  const [count, setCount] = useState(0)
-  const handleAnimationComplete = () => {
-    console.log('All letters have animated!');
-    };
-  const items = [
-    { label: "Home", href: "#home" },
-    { label: "About", href: "#about" },
-    { label: "Experience", href: "#experience" },
-    { label: "Contact", href: "#contact" },
-  ];
+  import { VscHome, VscArchive, VscMail, VscGithubAlt } from 'react-icons/vsc';
 
-  return (
-    <>
-      <NavBar
-        style={{  }}
-        items={items}
-        particleCount={0}
-        initialActiveIndex={0}
-        animationTime={600}
-        timeVariance={300}
-        colors={[1, 2, 3, 1, 2, 3, 1, 4]}
-      />
+  function App() {
+    const [count, setCount] = useState(0)
+    const [showPlayer, setShowPlayer] = useState(false);
 
-      <section className="hero-section">
-        {/* arnav. */}
-        <div className="relative my-[100px] flex justify-center items-center group">
-          {/* Big centered text */}
-          <p 
-            className="text-black text-[40px] sm:text-[80px] md:text-[120px] lg:text-[200px] leading-none"
-            style={{ fontFamily: "NeometricExtraBold" }}
-          >
-            arnav.
-          </p>
-          {/* Ghost images layered over text */}
-          <div className="absolute left-3/8 top-5/6 transform -translate-x-[20%] -translate-y-1/2 w-[100px] h-[100px]">
-            <img 
-              src="/images/ghost/openEyeGhost.svg" 
-              alt="Ghost" 
-              className="absolute z-100 inset-0 w-full h-full transition-opacity duration-400 ease-in-out group-hover:opacity-0"
-            />
-            <img  
-              src="/images/ghost/closedEyeGhost.svg" 
-              alt="Ghost Wink" 
-              className="absolute z-100 inset-0 w-full h-full opacity-0 transition-opacity duration-400 ease-in-out group-hover:opacity-100"
-            />
-            <p className="absolute z-50 w-[100px] h-[100px] rounded-full" style={{ backgroundColor:"#0057ff", color:"#0057ff" }}>.</p>
-          </div>
-        </div>
+    const items = [
+      { icon: <VscHome size={18} />, label: 'Home', onClick: () => { document.getElementById("home-arnav").scrollIntoView({ behavior: "smooth", block: "start" }) } },
+      { icon: <VscArchive size={18} />, label: 'Projects', onClick: () => alert('Projects!') },
+      { icon: <VscMail size={18} />, label: 'Mail', onClick: () => window.open('mailto:arnavpayghan.work@gmail.com') },
+      { icon: <VscGithubAlt size={18} />, label: 'GitHub', onClick: () => window.open('https://github.com/arnav-payghan') },
+    ];
 
+    return (
+      <>
+        <CursorifyProvider
+          cursor={DefaultCursor}
+          opacity={1}
+          delay={1}
+          defaultCursorVisible={false}
+          breakpoint={997}
+        >
+          <section className="relative grid grid-cols-[2fr_3fr_2fr] min-h-screen">
+            {/* Left Column Empty Due to Middle requirements */}
+            <div></div>
 
-      </section>
+            <div>
+              <div className="absolute inset-0 z-0 w-full h-[800px] m-0 p-0 px-6" >
+                <LightRays
+                  raysOrigin="top-center"
+                  raysColor="#000000ff"
+                  raysSpeed={0.5}
+                  lightSpread={0.8}
+                  rayLength={1.2}
+                  followMouse={false}
+                  mouseInfluence={0.1}
+                  noiseAmount={0.1}
+                  distortion={0.05}
+                  className="custom-rays z-0"
+                />
+              </div>
+              <div className="title relative z-10 flex flex-col items-left text-left z-10 text-balance sm:text-balance md:text-balance lg:text-balance xl:text-balance 2xl:text-balance">
+                <div className=""> {/* grid grid-cols-[1fr_3fr] */}
+                  {/* <div className="myPhoto">
+                    <img src="/images/myPhotos/arnav.png" alt="Arnav Payghan" className="w-30 h-30 rounded-full border-4 border-neutral-700 shadow-lg translate-x-3 mt-18" />
+                  </div> */}
+                  <div>
+                    <p className="name mt-10 text-[50px]" id="home-arnav">hi, i'm arnav.</p>
+                    <article className="text-wrap w-full max-w-3xl -mt-1" style={{ fontFamily: 'Helvetica' }}>
+                      <p>Navi Mumbai, India</p>
+                    </article>
+                  </div>
+                </div>
+                <p className="text-gray-300 mt-3 leading-5 text-sm" style={{ fontFamily: 'Helvetica' }} >Hey there! I'm Arnav Payghan, a final year computer engineering student. Currently learning UI/UX design and web development. I love to design and create user-friendly interfaces that enhance the overall user experience.</p>
+              </div>
+            </div>
 
-      <section className="aboutMe-section">
-        <div className="flex flex-col items-center justify-center h-screen">
-          <div className="information">
-            <table className="table-auto">
-              <thead className="text-black text-[30px] sm:text-[60px] md:text-[100px] lg:text-[150px]" style={{ fontFamily: "NeometricAltMedium" }}>
-                <tr>
-                  <th>Hello!</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>Welcome to my portfolio website.</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-        </div>
-      </section>
+            {/* Right Column Empty Due to Middle requirements */}
+            <div></div>
 
 
-    </>
-  )
-}
 
-export default App
+          </section>
+          
+          <Dock 
+            items={items}
+            panelHeight={70}
+            baseItemSize={50}
+            magnification={70}
+            className="z-1000 fixed backdrop-blur-md bg-[rgba(255,255,255,0.1)"
+          />
+
+          <MusicPlayer
+            track={{
+              title: "Do I Wanna Know?",
+              artist: "Arctic Monkeys",
+              cover: "/images/musicCover/ArcticMonkeysLogo.jpeg",
+              src: "/music/DoIWannaKnow.mp3",
+            }}
+          />
+
+        </CursorifyProvider>
+      </>
+    )
+  }
+
+  export default App

@@ -44,14 +44,13 @@
 #root {
   max-width: 1280px;
   margin: 0 auto;
-  padding: 2rem;
+  padding: 0;
   text-align: center;
 }
 
-.split-parent {
-  font-size: 150px; 
+.name {
   font-family: 'NeometricExtraBold', helvetica;
-  color:rgb(7, 7, 7)
+  color:rgb(233, 233, 233)
 }
 
 img {
