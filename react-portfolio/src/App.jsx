@@ -21,6 +21,7 @@
 
     return (
       <>
+        <div className="overflow-x-hidden overflow-y-scroll custom-scrollbar h-screen">
         <CursorifyProvider
           cursor={DefaultCursor}
           opacity={1}
@@ -88,6 +89,7 @@
           />
 
         </CursorifyProvider>
+        </div>
       </>
     )
   }
