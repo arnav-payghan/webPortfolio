@@ -61,7 +61,7 @@ export default function MusicPlayer({
         {autoplayFailed && (
           <button
             onClick={handleManualPlay}
-            className="mt-2 px-3 py-1 bg-gray-600 rounded-md text-xs hover:bg-white hover:text-black transition"
+            className="mt-2 px-3 py-1 bg-gray-600 rounded-md text-xs hover:bg-white hover:text-black transition" style={{ fontFamily: 'Helvetica' }}
           >
             Let's Vibe ✨
           </button>

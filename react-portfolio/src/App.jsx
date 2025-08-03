@@ -5,8 +5,10 @@
   import LightRays from './components/LightRays.jsx';
   import Dock from './components/Dock.jsx';
   import MusicPlayer from './components/MusicPlayer.jsx';
+  import SkillBox from './components/SkillBox.jsx';
 
   import { VscHome, VscArchive, VscMail, VscGithubAlt } from 'react-icons/vsc';
+  import { SiReact } from "react-icons/si";
 
   function App() {
     const [count, setCount] = useState(0)
@@ -62,8 +64,12 @@
                 </div>
                 <p className="text-gray-300 mt-3 leading-5 text-sm" style={{ fontFamily: 'Helvetica' }} >Hey there! I'm Arnav Payghan, a final year computer engineering student. Currently learning UI/UX design and web development. I love to design and create user-friendly interfaces that enhance the overall user experience.</p>
               </div>
-              <div className="skills">
-                
+              <div className="skills grid gird-cols-2 gap-4 mt-10">
+                <div className="">
+                  <SkillBox Icon={SiReact} skillName="React.js" />
+                  {/* <SkillBox Icon={SiTailwindcss} skillName="TailwindCSS" />
+                  <SkillBox Icon={SiNodedotjs} skillName="Node.js" /> */}
+                </div>
               </div>
             </div>
 
