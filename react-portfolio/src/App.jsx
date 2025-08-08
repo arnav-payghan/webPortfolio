@@ -58,6 +58,11 @@ function App() {
                   {/* <div className="myPhoto">
                     <img src="/images/myPhotos/arnav.png" alt="Arnav Payghan" className="w-30 h-30 rounded-full border-4 border-neutral-700 shadow-lg translate-x-3 mt-18" />
                   </div> */}
+                  {/* CAN BE REMOVED - WHICH IS GHOST IMAGE */}
+                  <div className="relative flex left-3/8 top-28 w-8 h-8 group">
+                    <img src="/images/ghost/openEyeGhost.svg" alt="ghost" className="absolute w-8 h-8 transition-opacity duration-300 group-hover:opacity-0" />
+                    <img src="/images/ghost/closedEyeGhost.svg" alt="ghost" className="absolute w-8 h-8 opacity-0 -rotate-20 transition-opacity duration-300 group-hover:opacity-100" />
+                  </div>
                   <div>
                     <p className="name mt-10 text-[50px]" id="home-arnav">hi, i'm arnav.</p>
                     <article className="text-wrap w-full max-w-3xl -mt-1" style={{ fontFamily: 'Helvetica' }}>
@@ -86,9 +91,10 @@ function App() {
               </div>
               <div className="">
                 <Education
-                  instituteName="Ramrao Adik Institute of Technology, Nerul."
-                  study="Bachelor of Engineering in Computer Engineering"
+                  instituteName="Ramrao Adik Institute of Technology"
+                  study="Bachelor of Technology in Computer Engineering"
                   duration="2022 - Present"
+                  marks="CGPA: 9.04"
                 />
                 {/* RAIT Education Pointers and Stuff containers here. */}
               </div>
