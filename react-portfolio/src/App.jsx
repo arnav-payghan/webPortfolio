@@ -36,6 +36,7 @@ function App() {
         <section className="relative grid grid-cols-[2fr_3fr_2fr] min-h-screen">
           {/* Left Column Empty Due to Middle requirements */}
           <div></div>
+
             <div>
             {/* BACKGROUND */}
             <div className="absolute inset-0 z-0 w-full h-[800px] m-0 p-0 px-6" >
@@ -51,8 +52,8 @@ function App() {
                   distortion={0.05}
                   className="custom-rays z-0"
               />
-            {/* TITLE */}
             </div>
+            {/* TITLE */}
             <div className="title relative z-10 flex flex-col items-left text-left z-10 text-balance sm:text-balance md:text-balance lg:text-balance xl:text-balance 2xl:text-balance">
                 <div className=""> {/* grid grid-cols-[1fr_3fr] */}
                   {/* <div className="myPhoto">
@@ -64,7 +65,7 @@ function App() {
                     <img src="/images/ghost/closedEyeGhost.svg" alt="ghost" className="absolute w-8 h-8 opacity-0 -rotate-20 transition-opacity duration-300 group-hover:opacity-100" />
                   </div>
                   <div>
-                    <p className="name mt-10 text-[50px]" id="home-arnav">hi, i'm arnav.</p>
+                    <p className="name text-[50px]" id="home-arnav">hi, i'm arnav.</p>
                     <article className="text-wrap w-full max-w-3xl -mt-1" style={{ fontFamily: 'Helvetica' }}>
                       <p className="-mx-1">📍Navi Mumbai, India</p>
                     </article>
