@@ -5,7 +5,7 @@ export default function SkillBox({ Icon, skillName }) {
       <Icon className="text-blue-500 w-7 h-7" />
       
       {/* Skill Name */}
-      <span className="text-white font-medium">{skillName}</span>
+      <span className="text-white font-medium sm:text-sm md:text-md lg:text-md xl:text-md 2xl:text-md">{skillName}</span>
     </div>
   );
 }

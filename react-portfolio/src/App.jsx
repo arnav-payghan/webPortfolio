@@ -6,6 +6,7 @@
   import Dock from './components/Dock.jsx';
   import MusicPlayer from './components/MusicPlayer.jsx';
   import SkillBox from './components/SkillBox.jsx';
+  import TiltedCard from './components/TiltedCard.jsx';
 
   import { VscHome, VscArchive, VscMail, VscGithubAlt } from 'react-icons/vsc';
   import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiExpress,  } from "react-icons/si";
@@ -37,6 +38,7 @@
             <div></div>
 
             <div>
+              {/* BACKGROUND */}
               <div className="absolute inset-0 z-0 w-full h-[800px] m-0 p-0 px-6" >
                 <LightRays
                   raysOrigin="top-center"
@@ -50,6 +52,7 @@
                   distortion={0.05}
                   className="custom-rays z-0"
                 />
+              {/* TITLE */}
               </div>
               <div className="title relative z-10 flex flex-col items-left text-left z-10 text-balance sm:text-balance md:text-balance lg:text-balance xl:text-balance 2xl:text-balance">
                 <div className=""> {/* grid grid-cols-[1fr_3fr] */}
@@ -59,12 +62,13 @@
                   <div>
                     <p className="name mt-10 text-[50px]" id="home-arnav">hi, i'm arnav.</p>
                     <article className="text-wrap w-full max-w-3xl -mt-1" style={{ fontFamily: 'Helvetica' }}>
-                      <p>Navi Mumbai, India</p>
+                      <p className="-mx-1">📍Navi Mumbai, India</p>
                     </article>
                   </div>
                 </div>
                 <p className="text-gray-300 mt-3 leading-5 text-sm" style={{ fontFamily: 'Helvetica' }} >Hey there! I'm Arnav Payghan, a final year computer engineering student. Currently learning UI/UX design and web development. I love to design and create user-friendly interfaces that enhance the overall user experience.</p>
               </div>
+              {/* SKILLS */}
               <div className="skills grid gird-cols-2 gap-4 mt-3 text-white">
                 <span className="text-left" style={{ fontFamily: 'NeometricMedium' }}>Skills</span>
                 <div className="grid grid-cols-3 gap-1">
@@ -74,6 +78,15 @@
                   <SkillBox Icon={SiMongodb} skillName="MongoDB" />
                   <SkillBox Icon={SiExpress} skillName="Express.js" />
                   <SkillBox Icon={FaJava} skillName="Java" />
+                </div>
+              </div>
+              {/* EDUCATION */}
+              <div className="">
+                <div className="text-md text-left my-4">
+                  <span style={{ fontFamily: 'NeometricMedium' }}>Education</span>
+                </div>
+                <div className="">
+                  {/* RAIT Education Pointers and Stuff containers here. */}
                 </div>
               </div>
             </div>
