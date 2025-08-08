@@ -6,7 +6,7 @@
   import Dock from './components/Dock.jsx';
   import MusicPlayer from './components/MusicPlayer.jsx';
   import SkillBox from './components/SkillBox.jsx';
-  import TiltedCard from './components/TiltedCard.jsx';
+  import Education from './components/Education.jsx';
 
   import { VscHome, VscArchive, VscMail, VscGithubAlt } from 'react-icons/vsc';
   import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiExpress,  } from "react-icons/si";
@@ -86,6 +86,11 @@
                   <span style={{ fontFamily: 'NeometricMedium' }}>Education</span>
                 </div>
                 <div className="">
+                  <Education
+                    instituteName="Ramrao Adik Institute of Technology, Nerul."
+                    study="Bachelor of Engineering in Computer Engineering"
+                    duration="2022 - Present"
+                  />
                   {/* RAIT Education Pointers and Stuff containers here. */}
                 </div>
               </div>
