@@ -8,7 +8,8 @@
   import SkillBox from './components/SkillBox.jsx';
 
   import { VscHome, VscArchive, VscMail, VscGithubAlt } from 'react-icons/vsc';
-  import { SiReact } from "react-icons/si";
+  import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiExpress,  } from "react-icons/si";
+  import { FaJava } from "react-icons/fa6";
 
   function App() {
     const [count, setCount] = useState(0)
@@ -39,10 +40,10 @@
               <div className="absolute inset-0 z-0 w-full h-[800px] m-0 p-0 px-6" >
                 <LightRays
                   raysOrigin="top-center"
-                  raysColor="#000000ff"
-                  raysSpeed={0.5}
-                  lightSpread={0.8}
-                  rayLength={1.2}
+                  raysColor="#ffffffff"
+                  raysSpeed={1.0}
+                  lightSpread={0.9}
+                  rayLength={1.5}
                   followMouse={false}
                   mouseInfluence={0.1}
                   noiseAmount={0.1}
@@ -64,11 +65,15 @@
                 </div>
                 <p className="text-gray-300 mt-3 leading-5 text-sm" style={{ fontFamily: 'Helvetica' }} >Hey there! I'm Arnav Payghan, a final year computer engineering student. Currently learning UI/UX design and web development. I love to design and create user-friendly interfaces that enhance the overall user experience.</p>
               </div>
-              <div className="skills grid gird-cols-2 gap-4 mt-10">
-                <div className="">
+              <div className="skills grid gird-cols-2 gap-4 mt-3 text-white">
+                <span className="text-left" style={{ fontFamily: 'NeometricMedium' }}>Skills</span>
+                <div className="grid grid-cols-3 gap-1">
                   <SkillBox Icon={SiReact} skillName="React.js" />
-                  {/* <SkillBox Icon={SiTailwindcss} skillName="TailwindCSS" />
-                  <SkillBox Icon={SiNodedotjs} skillName="Node.js" /> */}
+                  <SkillBox Icon={SiTailwindcss} skillName="TailwindCSS" />
+                  <SkillBox Icon={SiNodedotjs} skillName="Node.js" />
+                  <SkillBox Icon={SiMongodb} skillName="MongoDB" />
+                  <SkillBox Icon={SiExpress} skillName="Express.js" />
+                  <SkillBox Icon={FaJava} skillName="Java" />
                 </div>
               </div>
             </div>
