@@ -8,6 +8,7 @@ import MusicPlayer from './components/MusicPlayer.jsx';
 import SkillBox from './components/SkillBox.jsx';
 import Education from './components/Education.jsx';
 import ProjectBox from './components/ProjectBox.jsx';
+import ScrollReveal from './components/ScrollReveal.jsx';
 
 import { VscHome, VscArchive, VscMail, VscGithubAlt } from 'react-icons/vsc';
 import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiExpress,  } from "react-icons/si";
@@ -34,18 +35,18 @@ function App() {
           defaultCursorVisible={false}
         breakpoint={997}
       >
-        <section className="relative grid grid-cols-[2fr_3fr_2fr] min-h-screen">
+        <section className="relative grid grid-cols-[2fr_4fr_2fr] min-h-screen">
           {/* Left Column Empty Due to Middle requirements */}
           <div></div>
 
             <div>
             {/* BACKGROUND */}
-            <div className="absolute inset-0 z-0 w-full h-[800px] m-0 p-0 px-6" >
+            <div className="absolute inset-0 z-0 w-full h-full m-0 p-0 px-6" >
               <LightRays
                 raysOrigin="top-center"
-                  raysColor="#ffffffff"
+                  raysColor="#525252ff"
                   raysSpeed={1.0}
-                  lightSpread={0.9}
+                  lightSpread={0.3}
                   rayLength={1.5}
                   followMouse={false}
                   mouseInfluence={0.1}
@@ -102,6 +103,11 @@ function App() {
               </div>
             </div>
             {/* Projects */}
+            <div className="">
+              <h2 className={`my-5`}>
+                <p className={`text-4xl leading-[1.2] text-left tracking-tight`} style={{ fontFamily: 'NeometricBold' }}>Wanna see my work?<br />Here are some of my projects✨</p>
+              </h2>
+            </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           </div>
 
