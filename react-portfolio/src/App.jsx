@@ -102,12 +102,9 @@ function App() {
               </div>
             </div>
             <div className="grid grid-cols-2 gapa-4 mt-4"> {/* Projects */}
-              <ProjectBox 
-                projectURL="/images/projects/spiritLands.svg"
-                projectTitle={<p>Spirit Lands</p>}
-                projectDesc={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto obcaecati error tenetur possimus, modi enim expedita ipsa libero.</p>}
-              />
+              {/* hello */}
             </div>
+            <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           </div>
 
           {/* Right Column Empty Due to Middle requirements */}
