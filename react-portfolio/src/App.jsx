@@ -7,6 +7,7 @@ import Dock from './components/Dock.jsx';
 import MusicPlayer from './components/MusicPlayer.jsx';
 import SkillBox from './components/SkillBox.jsx';
 import Education from './components/Education.jsx';
+import ProjectBox from './components/ProjectBox.jsx';
 
 import { VscHome, VscArchive, VscMail, VscGithubAlt } from 'react-icons/vsc';
 import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiExpress,  } from "react-icons/si";
@@ -60,12 +61,12 @@ function App() {
                     <img src="/images/myPhotos/arnav.png" alt="Arnav Payghan" className="w-30 h-30 rounded-full border-4 border-neutral-700 shadow-lg translate-x-3 mt-18" />
                   </div> */}
                   {/* CAN BE REMOVED - WHICH IS GHOST IMAGE */}
-                  <div className="relative flex left-3/8 top-28 w-8 h-8 group">
+                  <div className="relative flex left-7/15 top-21 w-8 h-8 group">
                     <img src="/images/ghost/openEyeGhost.svg" alt="ghost" className="absolute w-8 h-8 transition-opacity duration-300 group-hover:opacity-0" />
                     <img src="/images/ghost/closedEyeGhost.svg" alt="ghost" className="absolute w-8 h-8 opacity-0 -rotate-20 transition-opacity duration-300 group-hover:opacity-100" />
                   </div>
                   <div>
-                    <p className="name text-[50px]" id="home-arnav">hi, i'm arnav.</p>
+                    <p className="name text-[65px]" id="home-arnav">hi, i'm arnav.</p>
                     <article className="text-wrap w-full max-w-3xl -mt-1" style={{ fontFamily: 'Helvetica' }}>
                       <p className="-mx-1">📍Navi Mumbai, India</p>
                     </article>
@@ -99,6 +100,13 @@ function App() {
                 />
                 {/* RAIT Education Pointers and Stuff containers here. */}
               </div>
+            </div>
+            <div className="grid grid-cols-2 gapa-4 mt-4"> {/* Projects */}
+              <ProjectBox 
+                projectURL="/images/projects/spiritLands.svg"
+                projectTitle={<p>Spirit Lands</p>}
+                projectDesc={<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto obcaecati error tenetur possimus, modi enim expedita ipsa libero.</p>}
+              />
             </div>
           </div>
 
