@@ -101,9 +101,7 @@ function App() {
                 {/* RAIT Education Pointers and Stuff containers here. */}
               </div>
             </div>
-            <div className="grid grid-cols-2 gapa-4 mt-4"> {/* Projects */}
-              {/* hello */}
-            </div>
+            {/* Projects */}
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           </div>
 
