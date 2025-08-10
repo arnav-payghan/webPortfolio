@@ -63,9 +63,9 @@ function App() {
                     <img src="/images/myPhotos/arnav.png" alt="Arnav Payghan" className="w-30 h-30 rounded-full border-4 border-neutral-700 shadow-lg translate-x-3 mt-18" />
                   </div> */}
                   {/* CAN BE REMOVED - WHICH IS GHOST IMAGE */}
-                  <div className="relative flex left-7/15 top-21 w-8 h-8 group">
-                    <img src="/images/ghost/openEyeGhost.svg" alt="ghost" className="absolute w-8 h-8 transition-opacity duration-300 group-hover:opacity-0" />
-                    <img src="/images/ghost/closedEyeGhost.svg" alt="ghost" className="absolute w-8 h-8 opacity-0 -rotate-20 transition-opacity duration-300 group-hover:opacity-100" />
+                  <div className="relative flex left-7/15 top-21 w-9 h-9 group">
+                    <img src="/images/ghost/openEyeGhost.svg" alt="ghost" className="absolute w-9 h-9 transition-opacity duration-300 group-hover:opacity-0" />
+                    <img src="/images/ghost/closedEyeGhost.svg" alt="ghost" className="absolute w-9 h-9 opacity-0 -rotate-20 transition-opacity duration-300 group-hover:opacity-100" />
                   </div>
                   <div>
                     <p className="name text-[65px]" id="home-arnav">hi, i'm arnav.</p>
@@ -106,7 +106,7 @@ function App() {
                   duration="2022 - Present"
                   marks="CGPA: 9.04"
                 />
-                {/* RAIT Education Pointers and Stuff containers here. */}
+                {/* Education Pointers and Stuff containers here. */}
               </div>
             </div>
             {/* Projects */}
@@ -140,6 +140,7 @@ function App() {
               cover: "/images/musicCover/ArcticMonkeysLogo.jpeg",
               src: "/music/DoIWannaKnow.mp3",
           }}
+          className="blur-sm z-20000"
         />
 
       </CursorifyProvider>

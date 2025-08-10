@@ -2,7 +2,7 @@ import React from 'react'
 
 const Education = ( {instituteName, study, duration, marks} ) => {
   return (
-    <div className="border rounded-xl border-white/20 py-4 px-5 items-center mt-4">
+    <div className="border rounded-xl border-white/20 py-4 px-5 items-center mt-4 z-100">
         <div className="grid grid-cols-[3fr_1fr]">
             <div className="text-left">
                 <p className="text-lg" style={{ fontFamily: 'NeometricBold' }}>{ instituteName }</p>
