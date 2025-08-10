@@ -36,7 +36,7 @@ function App() {
           defaultCursorVisible={false}
         breakpoint={997}
       >
-        <section className="relative grid grid-cols-[2fr_4fr_2fr] min-h-screen">
+        <section className="relative grid grid-cols-[3fr_5fr_3fr] min-h-screen">
           {/* Left Column Empty Due to Middle requirements */}
           <div></div>
 
@@ -79,13 +79,17 @@ function App() {
             {/* SKILLS */}
             <div className="skills grid gird-cols-2 gap-4 mt-3 text-white">
                 <span className="text-left" style={{ fontFamily: 'NeometricMedium' }}>Skills</span>
-                <div className="grid grid-cols-3 gap-1">
-                  <SkillBox Icon={SiReact} skillName="React.js" />
-                  <SkillBox Icon={SiTailwindcss} skillName="TailwindCSS" />
-                  <SkillBox Icon={SiNodedotjs} skillName="Node.js" />
-                  <SkillBox Icon={SiMongodb} skillName="MongoDB" />
-                  <SkillBox Icon={SiExpress} skillName="Express.js" />
-                  <SkillBox Icon={FaJava} skillName="Java" />
+                <div className="flex flex-wrap gap-2">
+                  <SkillContainer skillName="HTML" />
+                  <SkillContainer skillName="CSS" />
+                  <SkillContainer skillName="JavaScript" />
+                  <SkillContainer skillName="Node.js" />
+                  <SkillContainer skillName="MongoDB" />
+                  <SkillContainer skillName="Express.js" />
+                  <SkillContainer skillName="MySQL" />
+                  <SkillContainer skillName="Java" />
+                  <SkillContainer skillName="Git" />
+                  <SkillContainer skillName="GitHub" />
                 </div>
             </div>
             {/* EDUCATION */}
@@ -108,14 +112,6 @@ function App() {
               <h2 className={`my-5`}>
                 <p className={`text-4xl leading-[1.2] text-left tracking-tight`} style={{ fontFamily: 'NeometricBold' }}>Wanna see my work?<br />Here are some of my projects✨</p>
               </h2>
-            </div>
-            <div className="grid gap-2">
-              <SkillContainer skillIcon={<SiReact />} skillName="React.js" />
-              <SkillContainer skillIcon={<SiTailwindcss />} skillName="TailwindCSS" />
-              <SkillContainer skillIcon={<SiNodedotjs />} skillName="Node.js" />
-              <SkillContainer skillIcon={<SiMongodb />} skillName="MongoDB" />
-              <SkillContainer skillIcon={<SiExpress />} skillName="Express.js" />
-              <SkillContainer skillIcon={<FaJava />} skillName="Java" />
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           </div>
