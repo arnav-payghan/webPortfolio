@@ -15,6 +15,7 @@ export default function MusicPlayer({
   useEffect(() => {
     const audio = audioRef.current;
     if (audio) {
+      audio.volume = 0.2;
       audio.muted = true; // allow autoplay
       const playPromise = audio.play();
 

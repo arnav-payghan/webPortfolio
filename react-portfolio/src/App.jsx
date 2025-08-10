@@ -50,7 +50,7 @@ function App() {
                   lightSpread={0.3}
                   rayLength={1.5}
                   followMouse={false}
-                  mouseInfluence={0.1}
+                  mouseInfluence={0}
                   noiseAmount={0.1}
                   distortion={0.05}
                   className="custom-rays z-0"
@@ -79,15 +79,17 @@ function App() {
             {/* SKILLS */}
             <div className="skills grid gird-cols-2 gap-4 mt-3 text-white">
                 <span className="text-left" style={{ fontFamily: 'NeometricMedium' }}>Skills</span>
-                <div className="flex flex-wrap gap-2">
+                <div className="flex flex-wrap gap-1.5">
                   <SkillContainer skillName="HTML" />
                   <SkillContainer skillName="CSS" />
                   <SkillContainer skillName="JavaScript" />
+                  <SkillContainer skillName="React.js" />
                   <SkillContainer skillName="Node.js" />
                   <SkillContainer skillName="MongoDB" />
                   <SkillContainer skillName="Express.js" />
                   <SkillContainer skillName="MySQL" />
                   <SkillContainer skillName="Java" />
+                  <SkillContainer skillName="Figma" />
                   <SkillContainer skillName="Git" />
                   <SkillContainer skillName="GitHub" />
                 </div>
