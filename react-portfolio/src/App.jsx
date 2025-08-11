@@ -111,11 +111,17 @@ function App() {
               </div>
             </div>
             {/* Projects */}
-            <div className="">
-              {/* <h2 className={`my-5`}>
-                <p className={`text-4xl leading-[1.2] text-left tracking-tight`} style={{ fontFamily: 'NeometricBold' }}>Wanna see my work?<br />Here are some of my projects✨</p>
-              </h2> */}
-              <TextType text="Wanna see my work? Here are some of my projects✨" />
+            <div className="text-left mt-4">
+              <TextType 
+                text={["Wanna see my work?", "Here are some of my projects <3"]}
+                typingSpeed={50}
+                initialDelay={1000}
+                pauseDuration={2000}
+                showCursor={true}
+                cursorCharacter="_"
+                className="items-left text-left text-5xl leading-[1.2] text-left tracking-tight"
+                style={{ fontFamily: 'NeometricBold' }}
+              />
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           </div>
