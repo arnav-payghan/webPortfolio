@@ -10,6 +10,7 @@ import Education from './components/Education.jsx';
 import ProjectBox from './components/ProjectBox.jsx';
 import ScrollReveal from './components/ScrollReveal.jsx';
 import SkillContainer from './components/SkillContainer.jsx';
+import TextType from './components/TextType.jsx';
 
 import { VscHome, VscArchive, VscMail, VscGithubAlt } from 'react-icons/vsc';
 import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiExpress,  } from "react-icons/si";
@@ -111,20 +112,19 @@ function App() {
             </div>
             {/* Projects */}
             <div className="">
-              <h2 className={`my-5`}>
+              {/* <h2 className={`my-5`}>
                 <p className={`text-4xl leading-[1.2] text-left tracking-tight`} style={{ fontFamily: 'NeometricBold' }}>Wanna see my work?<br />Here are some of my projects✨</p>
-              </h2>
+              </h2> */}
+              <TextType text="Wanna see my work? Here are some of my projects✨" />
             </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           </div>
 
           {/* Right Column Empty Due to Middle requirements */}
           <div></div>
-
-
-
         </section>
-          
+
+        {/* BOTTOM NAVIGATION DOCK */}
         <Dock 
           items={items}
             panelHeight={70}
@@ -132,7 +132,7 @@ function App() {
             magnification={70}
             className="z-1000 fixed backdrop-blur-md bg-[rgba(255,255,255,0.1)"
         />
-
+        {/* TOP RIGHT MUSIC PLAYER DOCK */}
         <MusicPlayer
           track={{
               title: "Do I Wanna Know?",
