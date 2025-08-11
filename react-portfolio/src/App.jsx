@@ -22,7 +22,7 @@ function App() {
 
   const items = [
     { icon: <VscHome size={18} />, label: 'Home', onClick: () => { document.getElementById("home-arnav").scrollIntoView({ behavior: "smooth", block: "start" }) } },
-    { icon: <VscArchive size={18} />, label: 'Projects', onClick: () => alert('Projects!') },
+    { icon: <VscArchive size={18} />, label: 'Projects', onClick: () => { document.getElementById("projects").scrollIntoView({ behavior: "smooth", block: "start" }) } },
     { icon: <VscMail size={18} />, label: 'Mail', onClick: () => window.open('mailto:arnavpayghan.work@gmail.com') },
     { icon: <VscGithubAlt size={18} />, label: 'GitHub', onClick: () => window.open('https://github.com/arnav-payghan') },
   ];
@@ -111,15 +111,15 @@ function App() {
               </div>
             </div>
             {/* Projects */}
-            <div className="text-left mt-4">
-              <TextType 
-                text={["Wanna see my work?", "Here are some of my projects <3"]}
+            <div id="projects" className="text-left mt-5">
+              <TextType
+                text={["Wanna see my work?", "Here are some of my projects✨"]}
                 typingSpeed={50}
                 initialDelay={1000}
                 pauseDuration={2000}
                 showCursor={true}
                 cursorCharacter="_"
-                className="items-left text-left text-5xl leading-[1.2] text-left tracking-tight"
+                className="items-left text-left text-3xl leading-[1.2] text-left tracking-tight"
                 style={{ fontFamily: 'NeometricBold' }}
               />
             </div>
