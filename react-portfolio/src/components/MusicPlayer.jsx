@@ -117,13 +117,13 @@ export default function MusicPlayer() {
         <span className="text-xs text-gray-400">{currentTrack.artist}</span>
 
         <div className="flex items-center gap-2 mt-2">
-          <button onClick={playPrev}>
+          <button onClick={playPrev} className="flex transition-transform duration-200 hover:scale-120">
             <FaStepBackward />
           </button>
-          <button onClick={togglePlay}>
+          <button onClick={togglePlay} className="flex transition-transform duration-200 hover:scale-120">
             {isPlaying ? <FaPause /> : <FaPlay />}
           </button>
-          <button onClick={playNext}>
+          <button onClick={playNext} className="flex transition-transform duration-200 hover:scale-120">
             <FaStepForward />
           </button>
         </div>
