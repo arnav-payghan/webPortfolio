@@ -1,22 +1,20 @@
-import React from 'react';
+import React, { useRef } from 'react';
 
 const SkillContainer = ({ skillName }) => {
-  
-  <audio id="skillSound" src="#" preload="auto"></audio>
+  const audioRef = useRef(null);
 
-  document.addEventListener("DOMContentLoaded", () => {
-    const skillsHover = document.getElementById("skillsHover");
-    const sound = document.getElementById("skillSound");
-
-    skillsHover.addEventListener("mouseenter", () => {
-      sound.currentTime = 0;
-      sound.play();
-    });
-  });
+  const handleMouseEnter = () => {
+    if (audioRef.current) {
+      audioRef.current.currentTime = 0;
+      audioRef.current.play().catch((err) => {
+        console.warn("Audio play blocked or failed:", err);
+      });
+    }
+  };
 
   return (
     <div
-      id="skillsHover"
+      onMouseEnter={handleMouseEnter}
       className="text-sm border border-white/30 px-3.5 py-1.5 rounded-3xl text-bold
       inline-block transition-colors duration-200 ease-in-out bg-black/10 text-white bg-blur-sm
       hover:bg-[#0055ff] hover:text-white hover:font-semibold hover:scale-105 z-100 cursor-default"
@@ -24,8 +22,14 @@ const SkillContainer = ({ skillName }) => {
       <p className="text-center font-medium" style={{ fontFamily: 'Helvetica' }}>
         {skillName}
       </p>
-    </div>
 
+      {/* Audio element placed inside the same div to keep it scoped */}
+      <audio
+        ref={audioRef}
+        src="/audio/keyboardClick.mp3"
+        preload="auto"
+      />
+    </div>
   );
 };
 
