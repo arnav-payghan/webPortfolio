@@ -123,7 +123,7 @@ function App() {
                 style={{ fontFamily: 'NeometricBold' }}
               />
             </div>
-            <div className="flex grid grid-cols-2 w-auto mt-5">
+            <div className="flex grid grid-cols-2 w-auto mt-5 gap-10">
               <div className="">
                 <ProjectBox
                   projectTitle="Spirit Lands"
