@@ -123,6 +123,22 @@ function App() {
                 style={{ fontFamily: 'NeometricBold' }}
               />
             </div>
+            <div className="flex grid grid-cols-2 w-auto mt-5">
+              <div className="">
+                <ProjectBox
+                  projectTitle="Spirit Lands"
+                  projectDesc="Description of Spirit Lands"
+                  projectURL="/images/projects/spiritLands.svg"
+                />
+              </div>
+              <div className="">
+                <ProjectBox
+                  projectTitle="Project 1"
+                  projectDesc="Description of Project 1"
+                  projectURL="/images/projects/spiritLands.svg"
+                />
+              </div>
+            </div>
             <br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br /><br />
           </div>
 

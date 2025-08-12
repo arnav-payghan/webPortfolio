@@ -6,11 +6,12 @@ const ProjectBox = ({ projectURL, projectTitle, projectDesc }) => {
         <div className="border border-white/20 rounded-xl absolute">
             <div className="px-4 py-3">
                 <div className="flex items-center"> {/* PROJECT IMAGE CONTAINER */}
-                    <img src={`${ projectURL }`} alt="Project Image" className="h-30" />
+                    <img src={`${ projectURL }`} alt="Project Image" className="h-30 rounded-lg" />
                 </div>
-                <div className="flex items-center text-left grid grid-rows-2 max-w-xs"> {/* PROJECT INFORMATION CONTAINER */}
-                    <p className="">{ projectTitle }</p>
-                    <p className="">{ projectDesc }</p>
+                <div 
+                className="flex items-center text-left grid grid-rows-2 max-w-xs mt-2"> {/* PROJECT INFORMATION CONTAINER */}
+                    <p className="" style={{ fontFamily: 'NeometricAltMedium' }}>{ projectTitle }</p>
+                    <p className="" style={{ fontFamily: 'Helvetica', fontStyle: 'normal' }}>{ projectDesc }</p>
                 </div>
             </div>
         </div>
