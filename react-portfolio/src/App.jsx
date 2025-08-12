@@ -133,9 +133,9 @@ function App() {
               </div>
               <div className="">
                 <ProjectBox
-                  projectTitle="Project 1"
-                  projectDesc="Description of Project 1"
-                  projectURL="/images/projects/spiritLands.svg"
+                  projectTitle="Lost-Link"
+                  projectDesc="Description of Lost-Link"
+                  projectURL="/images/projects/LostLinkPoster.svg"
                 />
               </div>
             </div>
