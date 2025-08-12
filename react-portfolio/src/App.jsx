@@ -115,14 +115,14 @@ function App() {
               <TextType
                 text={["Wanna see my work?", "Here are some of my projects✨"]}
                 typingSpeed={50}
-                initialDelay={1000}
-                pauseDuration={2000}
+                initialDelay={1500}
+                pauseDuration={3000}
                 showCursor={true}
                 cursorCharacter="_"
                 className="items-left text-left text-3xl leading-[1.2] text-left tracking-tight"
                 style={{ fontFamily: 'NeometricBold' }}
               />
-            </div>
+            </div> {/* ACTUAL PROJECT BOXES */}
             <div className="flex grid grid-cols-2 w-auto mt-5 gap-10">
               <div className="">
                 <ProjectBox
