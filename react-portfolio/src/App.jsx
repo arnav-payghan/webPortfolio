@@ -162,7 +162,7 @@ function App() {
               cover: "/images/musicCover/ArcticMonkeysLogo.jpeg",
               src: "/music/DoIWannaKnow.mp3",
           }}
-          className="blur-sm z-20000"
+          className="blur-sm z-500000"
         />
 
       </CursorifyProvider>

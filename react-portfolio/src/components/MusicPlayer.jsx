@@ -22,10 +22,10 @@ export default function MusicPlayer() {
       src: "/music/505.mp3",
     },
     {
-      title: "I Wanna Be Yours",
-      artist: "Arctic Monkeys",
-      cover: "/images/musicCover/505.jpeg",
-      src: "/music/Lofi.mp3",
+      title: "Kill Bill",
+      artist: "SZA",
+      cover: "/images/musicCover/KillBill-SZA.jpeg",
+      src: "/music/KillBill-SZA.mp3",
     },
   ];
 
