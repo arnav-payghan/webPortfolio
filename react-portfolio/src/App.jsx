@@ -33,27 +33,36 @@ function App() {
       <div className="">
       <CursorifyProvider
         cursor={DefaultCursor}
-          opacity={1}
-          delay={1}
-          defaultCursorVisible={false}
+        opacity={1}
+        delay={1}
+        defaultCursorVisible={false}
         breakpoint={997}
       >
         {/* BACKGROUND */}
         <div className="absolute inset-0 z-0 w-full h-full m-0 p-0 px-6" >
           <LightRays
             raysOrigin="top-center"
-              raysColor="#525252ff"
-              raysSpeed={1.0}
-              lightSpread={0.3}
-              rayLength={1.5}
-              followMouse={false}
-              mouseInfluence={0}
-              noiseAmount={0.1}
-              distortion={0.05}
-              className="custom-rays z-0"
+            raysColor="#525252ff"
+            raysSpeed={1.0}
+            lightSpread={0.3}
+            rayLength={1.5}
+            followMouse={false}
+            mouseInfluence={0}
+            noiseAmount={0.1}
+            distortion={0.05}
+            className="custom-rays z-0"
           />
         </div>
         <Analytics />
+        <MusicPlayer
+          track={{
+              title: "Do I Wanna Know?",
+              artist: "Arctic Monkeys",
+              cover: "/images/musicCover/ArcticMonkeysLogo.jpeg",
+              src: "/music/DoIWannaKnow.mp3",
+          }}
+          className="blur-sm z-500000"
+        />
         <section className="relative grid grid-cols-[3fr_5fr_3fr] min-h-screen">
           {/* Left Column Empty Due to Middle requirements */}
           <div></div>
@@ -64,7 +73,7 @@ function App() {
                 <div className=""> {/* grid grid-cols-[1fr_3fr] */}
                   {/* <div className="myPhoto">
                     <img src="/images/myPhotos/arnav.png" alt="Arnav Payghan" className="w-30 h-30 rounded-full border-4 border-neutral-700 shadow-lg translate-x-3 mt-18" />
-                  </div> */}
+                    </div> */}
                   {/* CAN BE REMOVED - WHICH IS GHOST IMAGE */}
                   <div className="relative flex left-7/15 top-21 w-9 h-9 group">
                     <img src="/images/ghost/openEyeGhost.svg" alt="ghost" className="absolute w-9 h-9 transition-opacity duration-300 group-hover:opacity-0" />
@@ -157,15 +166,6 @@ function App() {
             className="z-1000 fixed backdrop-blur-md bg-[rgba(255,255,255,0.1)"
         />
         {/* TOP RIGHT MUSIC PLAYER DOCK */}
-        <MusicPlayer
-          track={{
-              title: "Do I Wanna Know?",
-              artist: "Arctic Monkeys",
-              cover: "/images/musicCover/ArcticMonkeysLogo.jpeg",
-              src: "/music/DoIWannaKnow.mp3",
-          }}
-          className="blur-sm z-500000"
-        />
 
       </CursorifyProvider>
       </div>

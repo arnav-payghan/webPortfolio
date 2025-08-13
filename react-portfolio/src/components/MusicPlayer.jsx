@@ -100,7 +100,7 @@ export default function MusicPlayer() {
 
   return (
     <motion.div
-      className="fixed top-4 right-4 flex items-center gap-4 bg-[#121212] border border-neutral-700 rounded-2xl shadow-lg px-4 py-3 text-white backdrop-blur-md w-[340px]"
+      className="fixed top-4 z-500000 right-4 flex items-center gap-4 bg-[#121212] border border-neutral-700 rounded-2xl shadow-lg px-4 py-3 text-white backdrop-blur-md w-[340px] hidden sm:flex"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
     >
@@ -140,7 +140,7 @@ export default function MusicPlayer() {
       </div>
 
       {/* Audio Element */}
-      <audio ref={audioRef} preload="auto" loop />
+      <audio ref={audioRef} preload="auto" />
     </motion.div>
   );
 }
