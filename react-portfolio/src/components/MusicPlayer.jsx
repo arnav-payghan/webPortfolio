@@ -33,6 +33,7 @@ export default function MusicPlayer() {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isPlaying, setIsPlaying] = useState(false);
   const [autoplayFailed, setAutoplayFailed] = useState(false);
+  const [IsVisible, setIsVisible] = useState(false);
 
   const currentTrack = playlist[currentIndex];
 
@@ -117,7 +118,7 @@ export default function MusicPlayer() {
         <span className="font-semibold text-sm">{currentTrack.title}</span>
         <span className="text-xs text-gray-400">{currentTrack.artist}</span>
 
-        <div className="flex items-center gap-2 mt-2">
+        <div className={`controls flex items-center gap-2 mt-2 ${IsVisible ? "" : "hidden"}`}>
           <button onClick={playPrev} className="flex transition-transform duration-200 hover:scale-120">
             <FaStepBackward />
           </button>
@@ -131,7 +132,7 @@ export default function MusicPlayer() {
 
         {autoplayFailed && (
           <button
-            onClick={handleManualPlay}
+            onClick={() => { handleManualPlay(); setIsVisible(!IsVisible); }}
             className="mt-2 px-3 py-1 bg-gray-600 rounded-md text-xs hover:bg-white hover:text-black transition"
             style={{ fontFamily: "Helvetica" }}
           >
