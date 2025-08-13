@@ -141,7 +141,7 @@ export default function MusicPlayer() {
       </div>
 
       {/* Audio Element */}
-      <audio ref={audioRef} preload="auto" />
+      <audio ref={audioRef} preload="auto" loop />
     </motion.div>
   );
 }
