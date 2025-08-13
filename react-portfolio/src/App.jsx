@@ -2,6 +2,7 @@ import { useState } from 'react'
 import React from 'react'
 import './App.css'
 import { CursorifyProvider, DefaultCursor } from '@cursorify/react'
+import { Analytics } from "@vercel/analytics/next"
 import LightRays from './components/LightRays.jsx';
 import Dock from './components/Dock.jsx';
 import MusicPlayer from './components/MusicPlayer.jsx';
@@ -37,26 +38,26 @@ function App() {
           defaultCursorVisible={false}
         breakpoint={997}
       >
+        {/* BACKGROUND */}
+        <div className="absolute inset-0 z-0 w-full h-full m-0 p-0 px-6" >
+          <LightRays
+            raysOrigin="top-center"
+              raysColor="#525252ff"
+              raysSpeed={1.0}
+              lightSpread={0.3}
+              rayLength={1.5}
+              followMouse={false}
+              mouseInfluence={0}
+              noiseAmount={0.1}
+              distortion={0.05}
+              className="custom-rays z-0"
+          />
+        </div>
         <section className="relative grid grid-cols-[3fr_5fr_3fr] min-h-screen">
           {/* Left Column Empty Due to Middle requirements */}
           <div></div>
 
             <div>
-            {/* BACKGROUND */}
-            <div className="absolute inset-0 z-0 w-full h-full m-0 p-0 px-6" >
-              <LightRays
-                raysOrigin="top-center"
-                  raysColor="#525252ff"
-                  raysSpeed={1.0}
-                  lightSpread={0.3}
-                  rayLength={1.5}
-                  followMouse={false}
-                  mouseInfluence={0}
-                  noiseAmount={0.1}
-                  distortion={0.05}
-                  className="custom-rays z-0"
-              />
-            </div>
             {/* TITLE */}
             <div className="title relative z-10 flex flex-col items-left text-left z-10 text-balance sm:text-balance md:text-balance lg:text-balance xl:text-balance 2xl:text-balance">
                 <div className=""> {/* grid grid-cols-[1fr_3fr] */}
