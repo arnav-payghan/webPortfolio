@@ -2,7 +2,7 @@ import { useState } from 'react'
 import React from 'react'
 import './App.css'
 import { CursorifyProvider, DefaultCursor } from '@cursorify/react'
-import { Analytics } from "@vercel/analytics/next"
+import { Analytics } from "@vercel/analytics/react"
 import LightRays from './components/LightRays.jsx';
 import Dock from './components/Dock.jsx';
 import MusicPlayer from './components/MusicPlayer.jsx';
@@ -53,6 +53,7 @@ function App() {
               className="custom-rays z-0"
           />
         </div>
+        <Analytics />
         <section className="relative grid grid-cols-[3fr_5fr_3fr] min-h-screen">
           {/* Left Column Empty Due to Middle requirements */}
           <div></div>
