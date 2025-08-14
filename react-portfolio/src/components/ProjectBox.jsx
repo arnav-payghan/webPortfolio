@@ -1,5 +1,8 @@
 import React, { useRef } from 'react';
-import ProjectSkillContainer from './ProjectSkillContainer'; // Make sure path is correct
+import ProjectSkillContainer from './ProjectSkillContainer'; 
+
+import { PiGlobeBold } from "react-icons/pi";
+
 
 const ProjectBox = ({ projectURL, projectTitle, projectDesc, projectWebsite, projectSkill = [] }) => {
   const audioRef = useRef(null);
@@ -28,6 +31,13 @@ const ProjectBox = ({ projectURL, projectTitle, projectDesc, projectWebsite, pro
             </div>
             <div className="">
                 <ProjectSkillContainer skillItems={projectSkill} />
+            </div>
+            <div className="px-3 py-1 mt-2 bg-gray-200 text-black text-sm rounded-2xl font-bold hover:bg-gray-300"
+                 style={{ fontFamily: 'Helvetica' }}>
+                <button className="inline-flex items-center">
+                    <PiGlobeBold className="inline-block mr-1" />
+                    Website
+                </button>
             </div>
           </div>
           

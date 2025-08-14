@@ -136,6 +136,7 @@ function App() {
                 <ProjectBox
                   projectTitle="Spirit Lands"
                   projectURL="/images/projects/spiritLands.svg"
+                  projectSkill={['Unity', 'C#', 'Aseprite']}
                 />
               </div>
               <div className="">
