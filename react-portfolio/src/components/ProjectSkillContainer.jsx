@@ -1,8 +1,8 @@
 const ProjectSkillContainer = ({ skillItems }) => {
   return (
-    <div className="skill-container mt-2 flex gap-2 flex-wrap">
+    <div className="skill-container flex gap-1.5 flex-wrap">
       {skillItems?.map((skill, index) => (
-        <span key={index} className="skill-badge px-2 py-1 bg-white/10 text-white text-sm rounded">
+        <span key={index} className="skill-badge px-3 py-1 mt-0.5 border border-white/30 bg-black/10 text-white text-xs rounded-2xl">
           {skill}
         </span>
       ))}

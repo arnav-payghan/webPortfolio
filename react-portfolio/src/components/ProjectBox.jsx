@@ -21,11 +21,16 @@ const ProjectBox = ({ projectURL, projectTitle, projectDesc, projectWebsite, pro
             <img src={projectURL} alt="Project Image" className="rounded-lg w-60" />
           </div>
           <div className="grid grid-rows-2 mt-2 text-left">
-            <p className="overflow-hidden" style={{ fontFamily: 'NeometricAltMedium' }}>
-              {projectTitle}
-            </p>
+            <div className="">
+                <p className="overflow-hidden" style={{ fontFamily: 'NeometricAltMedium' }}>
+                    {projectTitle}
+                </p>
+            </div>
+            <div className="">
+                <ProjectSkillContainer skillItems={projectSkill} />
+            </div>
           </div>
-          <ProjectSkillContainer skillItems={projectSkill} />
+          
         </div>
       </div>
     </div>
