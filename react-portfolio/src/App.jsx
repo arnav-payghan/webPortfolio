@@ -32,34 +32,35 @@ function App() {
     <>
       <div className="">
         {/* CUSTOM CURSOR */}
-        <CustomCursor />
+        {/* <CustomCursor /> */}
         
-        {/* BACKGROUND */}
-        <div className="absolute inset-0 z-0 w-full h-full m-0 p-0 px-6" >
-          <LightRays
-            raysOrigin="top-center"
-            raysColor="#ffffffff"
-            raysSpeed={1.5}
-            lightSpread={0.6}
-            rayLength={1.8}
-            followMouse={false}
-            mouseInfluence={0}
-            noiseAmount={0.1}
-            distortion={0.05}
-            className="custom-rays z-0"
-          />
-        </div>
         <Analytics />
         <MusicPlayer
           track={{
-              title: "Do I Wanna Know?",
-              artist: "Arctic Monkeys",
-              cover: "/images/musicCover/ArcticMonkeysLogo.jpeg",
+            title: "Do I Wanna Know?",
+            artist: "Arctic Monkeys",
+            cover: "/images/musicCover/ArcticMonkeysLogo.jpeg",
               src: "/music/DoIWannaKnow.mp3",
           }}
           className="blur-sm z-500000"
         />
         <section className="relative grid grid-cols-[3fr_5fr_3fr] min-h-screen">
+        {/* BACKGROUND */}
+            <div className="absolute inset-0 z-0 w-full h-full m-0 p-0 px-6" >
+              <LightRays
+                raysOrigin="top-center"
+                raysColor="#ffffffff"
+                raysSpeed={1.5}
+                lightSpread={0.6}
+                rayLength={1.3}
+                followMouse={false}
+                mouseInfluence={0}
+                noiseAmount={0.1}
+                distortion={0.05}
+                className="custom-rays z-0"
+              />
+            </div>
+
           {/* Left Column Empty Due to Middle requirements */}
           <div></div>
 
@@ -130,7 +131,7 @@ function App() {
                 style={{ fontFamily: 'NeometricBold' }}
               />
             </div> {/* ACTUAL PROJECT BOXES */}
-            <div className="flex grid grid-cols-2 w-auto mt-5 gap-10">
+            <div className="flex grid grid-cols-2 mt-5 gap-10">
               <div className="">
                 <ProjectBox
                   projectTitle="Spirit Lands"
