@@ -11,6 +11,7 @@ import ProjectBox from './components/ProjectBox.jsx';
 import ScrollReveal from './components/ScrollReveal.jsx';
 import SkillContainer from './components/SkillContainer.jsx';
 import TextType from './components/TextType.jsx';
+import CustomCursor from './components/CustomCursor.jsx';
 
 import { VscHome, VscArchive, VscMail, VscGithubAlt } from 'react-icons/vsc';
 import { SiReact, SiTailwindcss, SiNodedotjs, SiMongodb, SiExpress,  } from "react-icons/si";
@@ -31,8 +32,7 @@ function App() {
     <>
       <div className="">
         {/* CUSTOM CURSOR */}
-        
-
+        <CustomCursor />
         
         {/* BACKGROUND */}
         <div className="absolute inset-0 z-0 w-full h-full m-0 p-0 px-6" >
