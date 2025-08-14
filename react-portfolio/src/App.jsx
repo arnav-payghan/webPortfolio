@@ -30,6 +30,10 @@ function App() {
   return (
     <>
       <div className="">
+        {/* CUSTOM CURSOR */}
+        
+
+        
         {/* BACKGROUND */}
         <div className="absolute inset-0 z-0 w-full h-full m-0 p-0 px-6" >
           <LightRays
