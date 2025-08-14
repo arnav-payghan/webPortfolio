@@ -135,14 +135,13 @@ function App() {
               <div className="">
                 <ProjectBox
                   projectTitle="Spirit Lands"
-                  projectDesc="Description of Spirit Lands"
                   projectURL="/images/projects/spiritLands.svg"
+                  projectSkillItems={["React.js", "Tailwind CSS", "Node.js", "MongoDB"]}
                 />
               </div>
               <div className="">
                 <ProjectBox
                   projectTitle="Lost-Link"
-                  projectDesc="Description of Lost-Link"
                   projectURL="/images/projects/LostLinkPoster.svg"
                 />
               </div>

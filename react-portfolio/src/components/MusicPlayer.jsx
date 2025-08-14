@@ -102,7 +102,7 @@ export default function MusicPlayer() {
   {/* Made it hidden for mobile => hidden sm:flex */}
   return (
     <motion.div
-      className="fixed top-4 z-500000 right-4 flex items-center gap-4 bg-[#121212] border border-neutral-700 rounded-2xl shadow-lg px-4 py-3 text-white backdrop-blur-md w-[340px] hidden sm:flex"
+      className="fixed top-4 z-500000 right-4 flex items-center gap-4 bg-[#121212]/10 border border-neutral-700 rounded-2xl shadow-lg px-4 py-3 text-white backdrop-blur-md w-[340px]"
       initial={{ opacity: 0, y: 50 }}
       animate={{ opacity: 1, y: 0 }}
     >
