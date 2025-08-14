@@ -1,7 +1,6 @@
 import { useState } from 'react'
 import React from 'react'
 import './App.css'
-import { CursorifyProvider, DefaultCursor } from '@cursorify/react'
 import { Analytics } from "@vercel/analytics/react"
 import LightRays from './components/LightRays.jsx';
 import Dock from './components/Dock.jsx';
@@ -31,21 +30,14 @@ function App() {
   return (
     <>
       <div className="">
-      <CursorifyProvider
-        cursor={DefaultCursor}
-        opacity={1}
-        delay={1}
-        defaultCursorVisible={false}
-        breakpoint={997}
-      >
         {/* BACKGROUND */}
         <div className="absolute inset-0 z-0 w-full h-full m-0 p-0 px-6" >
           <LightRays
             raysOrigin="top-center"
-            raysColor="#525252ff"
-            raysSpeed={1.0}
-            lightSpread={0.3}
-            rayLength={1.5}
+            raysColor="#ffffffff"
+            raysSpeed={1.5}
+            lightSpread={0.6}
+            rayLength={1.8}
             followMouse={false}
             mouseInfluence={0}
             noiseAmount={0.1}
@@ -167,7 +159,6 @@ function App() {
         />
         {/* TOP RIGHT MUSIC PLAYER DOCK */}
 
-      </CursorifyProvider>
       </div>
     </>
   )
