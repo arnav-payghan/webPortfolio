@@ -151,7 +151,7 @@ function App() {
           </div>
 
           {/* Right Column Empty Due to Middle requirements */}
-          <div></div>
+          <div className=''></div>
         </section>
 
         {/* BOTTOM NAVIGATION DOCK */}
