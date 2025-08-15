@@ -23,7 +23,7 @@ const ProjectBox = ({ projectURL, projectTitle, projectDesc, projectWebsite, pro
           <div className="flex items-center">
             <img src={projectURL} alt="Project Image" className="rounded-lg w-60" />
           </div>
-          <div className="grid grid-rows-2 mt-2 text-left">
+          <div className="grid grid-rows-2 mt-2 text-left flex flex-wrap">
             <div className="">
                 <p className="overflow-hidden" style={{ fontFamily: 'NeometricAltMedium' }}>
                     {projectTitle}
