@@ -14,14 +14,14 @@ import Loader from './components/Loader.jsx';
 import { VscHome, VscArchive, VscMail, VscGithubAlt } from 'react-icons/vsc';
 
 function App() {
-  // const [loading, setLoading] = useState(true);
-  // useEffect(() => {
-  //   const timer = setTimeout(() => {
-  //     setLoading(false);
-  //   }, 3000)
+  const [loading, setLoading] = useState(true);
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoading(false);
+    }, 3000)
 
-  //   return () =>  clearTimeout(timer);
-  // }, []);
+    return () =>  clearTimeout(timer);
+  }, []);
 
   const [count, setCount] = useState(0)
   const [showPlayer, setShowPlayer] = useState(false);
