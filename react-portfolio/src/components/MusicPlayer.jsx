@@ -10,10 +10,10 @@ import {
 export default function MusicPlayer() {
   const playlist = [
     {
-      title: "Do I Wanna Know?",
-      artist: "Arctic Monkeys",
-      cover: "/images/musicCover/ArcticMonkeysLogo.jpeg",
-      src: "/music/DoIWannaKnow.mp3",
+      title: "blue",
+      artist: "yung kai",
+      cover: "/images/musicCover/blueCover.jpeg",
+      src: "/music/blueYungKai.mp3",
     },
     {
       title: "505",
@@ -26,6 +26,18 @@ export default function MusicPlayer() {
       artist: "SZA",
       cover: "/images/musicCover/KillBill-SZA.jpeg",
       src: "/music/KillBill-SZA.mp3",
+    },
+    {
+      title: "Eastside",
+      artist: "benny blanco, Halsey, Khalid",
+      cover: "/images/musicCover/Eastside.jpeg",
+      src: "/music/Eastside.mp3",
+    },
+    {
+      title: "1 AM",
+      artist: "Civ",
+      cover: "/images/musicCover/1AM.jpeg",
+      src: "/music/1AMCiv.mp3",
     },
   ];
 
