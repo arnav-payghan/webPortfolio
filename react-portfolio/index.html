@@ -5,8 +5,39 @@
     <link rel="icon" type="image/svg+xml" href="./src/assets/favicon/arnavsLogo.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Arnav Payghan</title>
+    <style>
+      .loading {
+        animation: sk-scaleout 1s infinite ease-in-out;
+        background-color: rgb(12, 12, 12);
+        border-radius: 100%;
+        height: 6em;
+        width: 6em;
+      }
+
+      .container {
+        align-items: center;
+        background: white;
+        display: flex;
+        height: 100vh;
+        justify-content: center;
+        width: 100vw;
+      }
+
+      @keyframes sk-scaleout {
+        0% {
+          transform: scale(0);
+        }
+        100% {
+          transform: scale(1);
+          opacity: 0.5;
+        }
+      }
+    </style>
   </head>
-  <body>
+  <body style="margin: 0">
+    <div id="loader" class="container">
+      <div class="loading"></div>
+    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>
