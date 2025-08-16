@@ -122,7 +122,7 @@ export default function MusicPlayer() {
       <img
         src={currentTrack.cover}
         alt={currentTrack.title}
-        className="w-16 h-16 rounded-md object-cover shadow-md"
+        className="w-16 h-16 rounded-md object-cover shadow-md border border-white/30"
       />
 
       {/* Info + Controls */}
