@@ -12,13 +12,13 @@ const ProjectBox = ({ projectURL, projectTitle, projectDesc, projectWebsite, pro
       audioRef.current.currentTime = 0;
       audioRef.current.play().catch((err) => {
         console.warn("Audio play blocked or failed:", err);
-      });
+      }); 
     }
   };
 
   return (
     <div onMouseEnter={handleMouseEnter}>
-      <div className="border border-white/20 rounded-xl absolute transition duration-300 hover:scale-110">
+      <div className="border border-white/20 rounded-xl transition-transform duration-300 hover:scale-105 transform-gpu">
         <div className="px-4 py-3">
           <div className="flex items-center">
             <img src={projectURL} alt="Project Image" className="rounded-lg w-60" />
